@@ -72,7 +72,13 @@ export function calculateCartQuantity() {
   if (quantityElem) {
     quantityElem.innerHTML = `${cartQuantity}`;
   }
+
+  const orderSummaryItems = document.querySelector('.js-order-summary-items');
+if(orderSummaryItems){
+    orderSummaryItems.innerHTML = `Items: ${cartQuantity}`;
 }
+}
+
 
 export function updateQuantity(productId, newQuantity) {
   let matchingItem;
